@@ -1,0 +1,45 @@
+<!DOCTYPE html> 
+<html> 
+
+<head> 
+	<script src= 
+"https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"> 
+	</script> 
+	<script> 
+		function changeSize() { 
+			$(this).animate({ 
+				fontSize: "+=3px" 
+			}); 
+		} 
+
+		function changeSpacing() { 
+			$(this).animate({ 
+				letterSpacing: "+=2px" 
+			}); 
+		} 
+
+		$(document).ready(function() { 
+			$("p").live("click", changeSize); 
+			$("p").live("click", changeSpacing); 
+			$("button").click(function() { 
+				$("p").die("click", changeSize); 
+			}); 
+		}); 
+	</script> 
+</head> 
+
+<body> 
+
+	<center> 
+		<p style="color:green;"> 
+			Geeks for geeks. 
+		</p> 
+		<button> 
+		added with the live() method, 
+		Remove the event handler changeSize(), 
+		for p elements 
+		</button> 
+	</center> 
+</body> 
+
+</html> 
